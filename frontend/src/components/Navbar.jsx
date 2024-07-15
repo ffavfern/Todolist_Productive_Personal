@@ -16,9 +16,13 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
       <Link to="/" className="btn btn-ghost normal-case text-xl">TodoApp</Link>
       <div className="flex-none">
         <ul className="menu menu-horizontal px-1">
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/">Dashboard</Link></li>
           {isLoggedIn && <li><Link to="/admin">Admin</Link></li>}
           {isLoggedIn && <li><Link to="/time-management">Time Management</Link></li>}
+          {isLoggedIn && <li><Link to="/health-fitness">Health Fitness</Link></li>}
+          {isLoggedIn && <li><Link to="/finance">Finance</Link></li>} 
+          {isLoggedIn && <li><Link to="/education">Education</Link></li>} 
+          {isLoggedIn && <li><Link to="/work">Work</Link></li>} 
           {!isLoggedIn ? (
             <li><Link to="/login">Login</Link></li>
           ) : (
